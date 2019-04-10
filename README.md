@@ -1,9 +1,11 @@
 # Biobjective_Instances
 
 
-This library contains instances for biobjective pure integer problems:
+This library contains instances for biobjective pure integer problems.
 
-* **linear_integer.zip** contains biobjective integer linear instances in **.dat** format. 
+## Linear Integer Instances
+
+  **linear_integer.zip** contains biobjective integer linear instances in **.dat** format. 
    
    
    The name of each file is in the format `added_instance_p-2_n-X_m-Y.lp` where `X` is the number of integer variables and `Y` is the number of constraints.
@@ -38,7 +40,17 @@ in [1,100] with probability 0.9 and they are set to zero with probability 0.05.
 
 
    **Remark**The new instances are 97. 58 problems have a number of constraints which is the 83% of the number of variables, the remaining 39 ones have exactly 10 constraints each.
+   
+   
+## Linearly Constrained Quadratic Instances
 
-*  **quadratic_integer.zip** contains biobjective integer linearly constrained quadratic instances in **.lp** format. 
-   The first constraint is the second objective.
+   **quadratic_integer.zip** contains biobjective integer linearly constrained quadratic instances in **.lp** format. 
+
+   **Remark** The first constraint (the only quadratic one) is the second objective.
+   
+   
    The name of each file is in the format `QuadraticILP_p-Z_n-X_m-Y.lp` where `X` is the number of integer variables, `Y` is the number of constraints. `Z` has not to be taken into consideration since it is inherited from [moolibrary](http://home.ku.edu.tr/~moolibrary/).
+   
+   The constraints matrix and the rhs vector are the same as in [moolibrary](http://home.ku.edu.tr/~moolibrary/).
+   
+   To generate the positive semidefinite quadratic functions Q1 and Q2 we firstly generated the Gramian complements L1 and L2 randomply and then we simply put Q1 = L1 L1' and Q2 = L2 L2'. The generic element Lij of the matrix L (L1 or L2) is chosen in {0, 1} with equal probability.
