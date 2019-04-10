@@ -26,7 +26,7 @@ This library contains instances for biobjective pure integer problems.
    6. [line (6+m+1)] The rhs coefficients. They appear in the format [ rhs_1, rhs_2, ... , rhs_m ]
   
    
-There are 97 instances.
+There are 97 instances:
    
    * The first 58 problems have a number of constraints which is the 83% of the number of variables and 
    coefficients chosen accordingly to the following
@@ -40,7 +40,7 @@ in [1,100] with probability 0.9 and they are set to zero with probability 0.05.
    * The remaining 39 problems have exactly 10 constraints each and 
    coefficients chosen accordingly to the following
    
-     1. c1_j and c2_j are integers with value in the range [-100, -1] with probability 0.2, in the range [0, 100] with probability 0.8 and they are set to zero with probability 0.9
+     1. c1_j and c2_j are integers with value in the range [-100, -1] with probability 0.02, in the range [0, 100] with probability 0.08 and they are set to zero with probability 0.9
      2. row_1_j, ... , row_m_j are generated in the range [-100,-1] with probability 0.2,
 in [1,100] with probability 0.6 and they are set to zero with probability 0.2.
 
