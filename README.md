@@ -66,3 +66,5 @@ in [1,100] with probability 0.6 and they are set to zero with probability 0.2.
    The constraints matrix and the rhs vector are the same as in [moolibrary](http://home.ku.edu.tr/~moolibrary/).
    
    To generate the positive semidefinite quadratic functions Q1 and Q2 we firstly generated the Gramian complements L1 and L2 randomply and then we simply put Q1 = L1 L1' and Q2 = L2 L2'. The generic element Lij of the matrix L (L1 or L2) is chosen in {0, 1} with equal probability.
+   
+   The objective functions are obtained by summing up the quadratic term and the original linear one, i.e. f1(x) = x'Q1 x + c1   and  f2(x) = x'Q2x + c2.
