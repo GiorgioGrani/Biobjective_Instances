@@ -12,27 +12,27 @@ This library contains instances for biobjective pure integer problems.
 
    The **.dat** are organized as follows:
 
-     1. [line 1] number of objectives (always 2)
-     2. [line 2] number of variables
-     3. [line 3] number of constraints m
-     4. [line 4 - 5] A matrix such that the first row is the first objective c1 and the second row is the second objective c2.
+   1. [line 1] number of objectives (always 2)
+   2. [line 2] number of variables
+   3. [line 3] number of constraints m
+   4. [line 4 - 5] A matrix such that the first row is the first objective c1 and the second row is the second objective c2.
      
         It appears in the format 
            [[ c1 ],
            [  c2 ]]
-     5. [line 6-(6+m)] The constraint matrix, where each row is a constraint.
+   5. [line 6-(6+m)] The constraint matrix, where each row is a constraint.
      
         The matrix is in the format [[ row_1 ],[ row_2 ],[ row_3 ], ... , [ row_m ]]
-     6. [line (6+m+1)] The rhs coefficients. They appear in the format [ rhs_1, rhs_2, ... , rhs_m ]
+   6. [line (6+m+1)] The rhs coefficients. They appear in the format [ rhs_1, rhs_2, ... , rhs_m ]
   
    
    Coefficients have been chosen accordingly to the following
    
-     1. c1_j and c2_j are integers with value in the range [-100, -1] with probability 0.2 and in the range [0, 100] with probability 0.8
-     2. row_1_j, ... , row_m_j are generated in the range [-100,-1] with probability 0.05,
+   1. c1_j and c2_j are integers with value in the range [-100, -1] with probability 0.2 and in the range [0, 100] with probability 0.8
+   2. row_1_j, ... , row_m_j are generated in the range [-100,-1] with probability 0.05,
 in [1,100] with probability 0.9 and they are set to zero with probability 0.05.
 
-     3. rhs_1, ... , rhs_m are generated in the range [0, tot], where tot is the sum of all the elments of the constraints matrix
+   3. rhs_1, ... , rhs_m are generated in the range [0, tot], where tot is the sum of all the elments of the constraints matrix
    
    **Remark** all the variables are non negatives and integers.
    
